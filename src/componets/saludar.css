@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;200;400;600&display=swap");
+
+.titulos {
+  color: red;
+  font-family: "Montserrat", Courier, monospace;
+  font-size: 45px;
+  font-weight: 300;
+}
+p {
+  font-size: 12px;
+  color: blue;
+}
+
+.contenedorFormulario {
+  width: 90%;
+  margin: 0 auto;
+}
+.leyenda {
+  font-family: "Poppins", Courier, monospace;
+  font-size: 18px;
+  color: blue;
+}
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.verde {
+  background-color: #008cba;
+}
+
+.rojo {
+  background-color: #f44336;
+}
+.negro {
+  background-color: #555555;
+}
