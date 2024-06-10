@@ -2,7 +2,9 @@
 
 .contenedorCabecera {
   background-color: hsl(195, 89%, 28%);
+  padding: 20px 0;
 }
+
 .cabeceraPrincipal {
   width: 90%;
   margin: 0 auto;
@@ -10,16 +12,146 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .cabeceraPrincipal h1 {
   font-family: "Montserrat", Courier, monospace;
   font-size: 35px;
   font-weight: 400;
   color: rgb(15, 16, 15);
+  margin: 0;
 }
+
+.menuPrincipal {
+  display: flex;
+  gap: 5px;
+}
+
+.menuPrincipal a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.menuPrincipal a:hover {
+  color: hsl(195, 89%, 28%);
+  background-color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: hsl(195, 89%, 28%);
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  min-width: 100px;
+  z-index: 1;
+ padding:10px;
+ padding-bottom:10px;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
+
+.dropdownMenu a {
+  color: white;
+  width: 90%;
+ 
+ 
+  white-space: nowrap;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdownMenu a:hover {
+  background-color: white;
+  color: hsl(195, 89%, 28%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cabeceraPrincipal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menuPrincipal {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .menuPrincipal a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .dropdownMenu a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cabeceraPrincipal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menuPrincipal {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .menuPrincipal a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    padding: 5px;
+  }
+
+  .dropdownMenu a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 .menuPrincipal a {
   text-decoration: none;
   font-family: "Poppins", Courier, monospace;
-  font-size: 17px;
+  font-size: 14px;
   padding: 0 20px;
   color: hsl(180, 33%, 94%);
   transition: 0.3s;
@@ -27,6 +159,11 @@
 .menuPrincipal a:hover {
   color: #059164;
   border-bottom: 1px solid #059164;
+}
+.header-logo img {
+  width: 40%;
+
+
 }
 .sliderPrinipal img {
   width: 100%;
