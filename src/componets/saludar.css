@@ -1,55 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@100;200;400;600&display=swap");
+/* saludar.css */
+.contenedorFormulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(195, 89%, 28%);
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+  display: flex;
+  width: 70%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-image {
+  flex: 1;
+  background: url('/public/login.jpg') no-repeat center center;
+  background-size: cover;
+  width: 5rem;
+  position: relative;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #1b3b70;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .titulos {
-  color: red;
-  font-family: "Montserrat", Courier, monospace;
-  font-size: 45px;
-  font-weight: 300;
-}
-p {
-  font-size: 12px;
-  color: blue;
-}
-
-.contenedorFormulario {
-  width: 90%;
-  margin: 0 auto;
-}
-.leyenda {
-  font-family: "Poppins", Courier, monospace;
-  font-size: 18px;
-  color: blue;
-}
-input[type="text"],
-input[type="password"],
-select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-.button {
-  background-color: #04aa6d; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  font-size: 32px;
+  margin-bottom: 20px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.verde {
-  background-color: #008cba;
+  color: #fff;
 }
 
-.rojo {
-  background-color: #f44336;
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
 }
-.negro {
-  background-color: #555555;
+
+input::placeholder {
+  color: #504f4f;
 }
+
+button.button {
+  width: 90%;
+  padding: 10px;
+  background-color: #fff;
+  color: #1b3b70;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+button.button:hover {
+  background-color: #ddd;
+}
+
+a {
+  color: #fff;
+  text-align: right;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.recuperar{
+  margin-right: 100px;
+ 
+}
+
+fieldset {
+  border-radius: 5px;
+}
+.nombre{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: -1rem;
+}
+
+

@@ -1,4 +1,5 @@
 import "./saludar.css";
+import PropTypes from 'prop-types';
 
 export function Saludar({ title, name = "User" }) {
   console.log(title, name);
@@ -7,52 +8,66 @@ export function Saludar({ title, name = "User" }) {
       <h2 className="titulos">
         Saludo {title} - {name}
       </h2>
-      <p>Esta es la informacion de la noticia</p>
     </section>
   );
 }
 
+Saludar.propTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string
+};
+
 export function UserCard({ name, amount, married, address }) {
-  //console.log(props);
   return (
     <div className="contenedorFormulario">
-      <h2 className="titulos">{name}</h2>
-      <p>{amount}</p>
-      <p>{married ? "married" : "single"}</p>
-      <form>
-        <fieldset>
-          <legend className="leyenda">Formulario de registro al sistema</legend>
-          <p>
-            <input
-              type="text"
-              name="size"
-              id="size_1"
-              placeholder="Ingrese el usuario"
-            />
-            <label for="size_1">Pequeño</label>
-          </p>
-          <p>
-            <input
-              type="password"
-              name="size"
-              id="size_2"
-              placeholder="Ingrese la clave"
-            />
-            <label for="size_2">Mediano</label>
-          </p>
-          <p>
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
-          </p>
-          <p>
-            <button className="button negro">INGRESAR</button>
-          </p>
-        </fieldset>
-      </form>
+      <div className="form-container">
+        <div className="form-image">
+        </div>
+        <div className="form-content">
+      <p className="nombre" >DANIEL MOREIRA</p>
+          <h2 className="titulos">Iniciar Sesión</h2>
+          <form>
+            <fieldset>
+              <p>
+                <input
+                  type="text"
+                  name="username"
+                  id="size_1"
+                  placeholder="Email"
+                />
+              </p>
+              <p>
+                <input 
+                 className="input"
+                  type="password"
+                  name="password"
+                  id="size_2"
+                  placeholder="Password"
+                />
+              </p>
+              <p>
+                <a className="recuperar" href="#">Olvidaaste la contraseña</a>
+              </p>
+              <p>
+                <button type="submit" className="button">Ingresar</button>
+              </p>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+          
     </div>
   );
 }
+
+UserCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
+  married: PropTypes.bool.isRequired,
+  address: PropTypes.shape({
+    street: PropTypes.string,
+    city: PropTypes.string,
+    state: PropTypes.string,
+    zip: PropTypes.string
+  })
+};
